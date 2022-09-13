@@ -1,0 +1,117 @@
+---
+---
+
+@article{mariano2022transpilation,
+author = {Mariano, Benjamin and Chen, Yanju and Feng, Yu and Durrett, Greg and Dillig, I\c{s}il},
+title = {Automated Transpilation of Imperative to Functional Code Using Neural-Guided Program Synthesis},
+year = {2022},
+issue_date = {April 2022},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {6},
+number = {OOPSLA1},
+url = {https://doi.org/10.1145/3527315},
+doi = {10.1145/3527315},
+abstract = {While many mainstream languages such as Java, Python, and C# increasingly incorporate functional APIs to simplify programming and improve parallelization/performance, there are no effective techniques that can be used to automatically translate existing imperative code to functional variants using these APIs. Motivated by this problem, this paper presents a transpilation approach based on inductive program synthesis for modernizing existing code. Our method is based on the observation that the overwhelming majority of source/target programs in this setting satisfy an assumption that we call trace-compatibility: not only do the programs share syntactically identical low-level expressions, but these expressions also take the same values in corresponding execution traces. Our method leverages this observation to design a new neural-guided synthesis algorithm that (1) uses a novel neural architecture called cognate grammar network (CGN) and (2) leverages a form of concolic execution to prune partial programs based on intermediate values that arise during a computation. We have implemented our approach in a tool called NGST2 and use it to translate imperative Java and Python code to functional variants that use the Stream and functools APIs respectively. Our experiments show that NGST2 significantly outperforms several baselines and that our proposed neural architecture and pruning techniques are vital for achieving good results.},
+journal = {Proc. ACM Program. Lang.},
+month = {apr},
+articleno = {71},
+numpages = {27},
+keywords = {transpilation, neural networks, program synthesis},
+bibtex_show={true},
+pdf={ngst2.pdf},
+arxiv={2203.09452},
+abbr={OOPSLA'22},
+selected={true}
+}
+
+@article{tan2022soltype,
+title={SolType: Refinement Types for Arithmetic Overflow in Solidity.},
+author={Tan, Bryan and Mariano, Benjamin and Lahiri, Shuvendu K. and Dillig, I\c{s}il and Feng, Yu},
+journal={Proc. ACM Program. Lang.},
+volume={6},
+number={POPL},
+pages={1--29},
+year={2022},
+bibtex_show={true},
+pdf={soltype.pdf},
+abbr={POPL'22},
+abstract={As smart contracts gain adoption in financial transactions, it becomes increasingly important to ensure that they are free of bugs and security vulnerabilities. Of particular relevance in this context are arithmetic overflow bugs, as integers are often used to represent financial assets like account balances. Motivated by this observation, this paper presents SolType, a refinement type system for Solidity that can be used to prevent arithmetic over- and under-flows in smart contracts. SolType allows developers to add refinement type annotations and uses them to prove that arithmetic operations do not lead to over- and under-flows. SolType incorporates a rich vocabulary of refinement terms that allow expressing relationships between integer values and aggregate properties of complex data structures. Furthermore, our implementation, called Solid, incorporates a type inference engine and can automatically infer useful type annotations, including non-trivial contract invariants.
+To evaluate the usefulness of our type system, we use Solid to prove arithmetic safety of a total of 120 smart contracts. When used in its fully automated mode (i.e., using Solid’s type inference capabilities), Solid is able to eliminate 86.3\% of redundant runtime checks used to guard against overflows. We also compare Solid against a state-of-the-art arithmetic safety verifier called VeriSmart and show that Solid has a significantly lower false positive rate, while being significantly faster in terms of verification time},
+selected={true}
+}
+
+@InProceedings{mansur2021tailor,
+author="Mansur, Muhammad Numair
+and Mariano, Benjamin
+and Christakis, Maria
+and Navas, Jorge A.
+and W{\"u}stholz, Valentin",
+editor="Silva, Alexandra
+and Leino, K. Rustan M.",
+title="Automatically Tailoring Abstract Interpretation to Custom Usage Scenarios",
+booktitle="Computer Aided Verification",
+year="2021",
+publisher="Springer International Publishing",
+address="Cham",
+pages="777--800",
+abstract="In recent years, there has been significant progress in the development and industrial adoption of static analyzers, specifically of abstract interpreters. Such analyzers typically provide a large, if not huge, number of configurable options controlling the analysis precision and performance. A major hurdle in integrating them in the software-development life cycle is tuning their options to custom usage scenarios, such as a particular code base or certain resource constraints.",
+isbn="978-3-030-81688-9",
+bibtex_show={true},
+pdf={tailor.pdf},
+abbr={CAV'21}
+}
+
+@INPROCEEDINGS{stephens2021smartpulse,
+author={Stephens, Jon and Ferles, Kostas and Mariano, Benjamin and Lahiri, Shuvendu K. and Dillig, I\c{s}il},
+booktitle={2021 IEEE Symposium on Security and Privacy (SP)}, 
+title={SmartPulse: Automated Checking of Temporal Properties in Smart Contracts}, 
+year={2021},
+volume={},
+number={},
+pages={555-571},
+doi={10.1109/SP40001.2021.00085},
+bibtex_show={true},
+pdf={smartpulse.pdf},
+abbr={S&P'21},
+abstract={Smart contracts are programs that run on the blockchain and digitally enforce the execution of contracts between parties. Because bugs in smart contracts can have serious monetary consequences, ensuring the correctness of such software is of utmost importance. In this paper, we present a novel technique, and its implementation in a tool called SmartPulse, for automatically verifying temporal properties in smart contracts. SmartPulse is the first smart contract verification tool that is capable of checking liveness properties, which ensure that “something good” will eventually happen (e.g., “I will eventually receive my refund”). We experimentally evaluate SmartPulse on a broad class of smart contracts and properties and show that (a) SmartPulse allows automatically verifying important liveness properties, (b) it is competitive with or better than state-of-the-art tools for safety verification, and (c) it can automatically generate attacks for vulnerable contracts.},
+selected={true}
+}
+
+@INPROCEEDINGS{mariano2020demystifying,
+author={Mariano, Benjamin and Chen, Yanju and Feng, Yu and Lahiri, Shuvendu K. and Dillig, I\c{s}il},
+booktitle={2020 35th IEEE/ACM International Conference on Automated Software Engineering (ASE)}, 
+title={Demystifying Loops in Smart Contracts}, 
+year={2020},
+volume={},
+number={},
+pages={262-274},
+doi={},
+bibtex_show={true},
+pdf={solis.pdf},
+abbr={ASE'20},
+abstract={This paper aims to shed light on how loops are used in smart contracts. Towards this goal, we study various syntactic and semantic characteristics of loops used in over 20,000 Solidity contracts deployed on the Ethereum blockchain, with the goal of informing future research on program analysis for smart contracts. Based on our findings, we propose a small domain-specific language (DSL) that can be used to summarize common looping patterns in Solidity. To evaluate what percentage of smart contract loops can be expressed in our proposed DSL, we also design and implement a program synthesis toolchain called Solis that can synthesize loop summaries in our DSL. Our evaluation shows that at least 56\% of the analyzed loops can be summarized in our DSL, and 81\% of these summaries are exactly equivalent to the original loop.},
+selected={true}
+}
+
+@article{mariano2019algspecs,
+author = {Mariano, Benjamin and Reese, Josh and Xu, Siyuan and Nguyen, ThanhVu and Qiu, Xiaokang and Foster, Jeffrey S. and Solar-Lezama, Armando},
+title = {Program Synthesis with Algebraic Library Specifications},
+year = {2019},
+issue_date = {October 2019},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {3},
+number = {OOPSLA},
+url = {https://doi.org/10.1145/3360558},
+doi = {10.1145/3360558},
+abstract = {A key challenge in program synthesis is synthesizing programs that use libraries, which most real-world software does. The current state of the art is to model libraries with mock library implementations that perform the same function in a simpler way. However, mocks may still be large and complex, and must include many implementation details, both of which could limit synthesis performance. To address this problem, we introduce JLibSketch, a Java program synthesis tool that allows library behavior to be described with algebraic specifications, which are rewrite rules for sequences of method calls, e.g., encryption followed by decryption (with the same key) is the identity. JLibSketch implements rewrite rules by compiling JLibSketch problems into problems for the Sketch program synthesis tool. More specifically, after compilation, library calls are represented by abstract data types (ADTs), and rewrite rules manipulate those ADTs. We formalize compilation and prove it sound and complete if the rewrite rules are ordered and non-unifiable. We evaluated JLibSketch by using it to synthesize nine programs that use libraries from three domains: data structures, cryptography, and file systems. We found that algebraic specifications are, on average, about half the size of mocks. We also found that algebraic specifications perform better than mocks on seven of the nine programs, sometimes significantly so, and perform equally well on the last two programs. Thus, we believe that JLibSketch takes an important step toward synthesis of programs that use libraries.},
+journal = {Proc. ACM Program. Lang.},
+month = {oct},
+articleno = {132},
+numpages = {25},
+keywords = {Sketch-based Program Synthesis, Algebraic Specification, Java, Term Rewriting},
+bibtex_show={true},
+pdf={jlibsketch.pdf},
+abbr={OOPSLA'19}
+}
