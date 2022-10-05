@@ -24,8 +24,9 @@
           {{reference}}
         {%- else %}
           <!-- Title -->
-          <div class="title">{{entry.title}}</div>
-          <!-- Author -->
+            <!-- <div class="title">{{entry.title}}</div> -->
+            <div class="title"><a href="{{entry.pdfpath}}">{{entry.title}}</a></div>
+            <!-- Author -->
           <div class="author">
           {% assign author_array_size = entry.author_array | size %}
 

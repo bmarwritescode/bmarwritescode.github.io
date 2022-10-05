@@ -20,6 +20,7 @@ numpages = {27},
 keywords = {transpilation, neural networks, program synthesis},
 bibtex_show={true},
 pdf={ngst2.pdf},
+pdfpath = {../assets/pdf/ngst2.pdf},
 arxiv={2203.09452},
 abbr={OOPSLA'22},
 selected={true}
@@ -35,6 +36,7 @@ pages={1--29},
 year={2022},
 bibtex_show={true},
 pdf={soltype.pdf},
+pdfpath={../assets/pdf/soltype.pdf},
 abbr={POPL'22},
 abstract={As smart contracts gain adoption in financial transactions, it becomes increasingly important to ensure that they are free of bugs and security vulnerabilities. Of particular relevance in this context are arithmetic overflow bugs, as integers are often used to represent financial assets like account balances. Motivated by this observation, this paper presents SolType, a refinement type system for Solidity that can be used to prevent arithmetic over- and under-flows in smart contracts. SolType allows developers to add refinement type annotations and uses them to prove that arithmetic operations do not lead to over- and under-flows. SolType incorporates a rich vocabulary of refinement terms that allow expressing relationships between integer values and aggregate properties of complex data structures. Furthermore, our implementation, called Solid, incorporates a type inference engine and can automatically infer useful type annotations, including non-trivial contract invariants.
 To evaluate the usefulness of our type system, we use Solid to prove arithmetic safety of a total of 120 smart contracts. When used in its fully automated mode (i.e., using Solid’s type inference capabilities), Solid is able to eliminate 86.3\% of redundant runtime checks used to guard against overflows. We also compare Solid against a state-of-the-art arithmetic safety verifier called VeriSmart and show that Solid has a significantly lower false positive rate, while being significantly faster in terms of verification time},
@@ -59,6 +61,7 @@ abstract="In recent years, there has been significant progress in the developmen
 isbn="978-3-030-81688-9",
 bibtex_show={true},
 pdf={tailor.pdf},
+pdfpath={../assets/pdf/tailor.pdf},
 abbr={CAV'21}
 }
 
@@ -73,6 +76,7 @@ pages={555-571},
 doi={10.1109/SP40001.2021.00085},
 bibtex_show={true},
 pdf={smartpulse.pdf},
+pdfpath={../assets/pdf/smartpulse.pdf},
 abbr={S&P'21},
 abstract={Smart contracts are programs that run on the blockchain and digitally enforce the execution of contracts between parties. Because bugs in smart contracts can have serious monetary consequences, ensuring the correctness of such software is of utmost importance. In this paper, we present a novel technique, and its implementation in a tool called SmartPulse, for automatically verifying temporal properties in smart contracts. SmartPulse is the first smart contract verification tool that is capable of checking liveness properties, which ensure that “something good” will eventually happen (e.g., “I will eventually receive my refund”). We experimentally evaluate SmartPulse on a broad class of smart contracts and properties and show that (a) SmartPulse allows automatically verifying important liveness properties, (b) it is competitive with or better than state-of-the-art tools for safety verification, and (c) it can automatically generate attacks for vulnerable contracts.},
 selected={true}
@@ -89,6 +93,7 @@ pages={262-274},
 doi={},
 bibtex_show={true},
 pdf={solis.pdf},
+pdfpath={../assets/pdf/solis.pdf},
 abbr={ASE'20},
 abstract={This paper aims to shed light on how loops are used in smart contracts. Towards this goal, we study various syntactic and semantic characteristics of loops used in over 20,000 Solidity contracts deployed on the Ethereum blockchain, with the goal of informing future research on program analysis for smart contracts. Based on our findings, we propose a small domain-specific language (DSL) that can be used to summarize common looping patterns in Solidity. To evaluate what percentage of smart contract loops can be expressed in our proposed DSL, we also design and implement a program synthesis toolchain called Solis that can synthesize loop summaries in our DSL. Our evaluation shows that at least 56\% of the analyzed loops can be summarized in our DSL, and 81\% of these summaries are exactly equivalent to the original loop.},
 selected={true}
@@ -113,5 +118,6 @@ numpages = {25},
 keywords = {Sketch-based Program Synthesis, Algebraic Specification, Java, Term Rewriting},
 bibtex_show={true},
 pdf={jlibsketch.pdf},
+pdfpath={../assets/pdf/jlibsketch.pdf},
 abbr={OOPSLA'19}
 }
