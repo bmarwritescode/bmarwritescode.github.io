@@ -1,6 +1,30 @@
 ---
 ---
 
+@article{mariano2024deobfuscation,
+author = {Mariano, Benjamin and Wang, Ziteng and Pailoor, Shankara and Collberg, Christian and Dillig, I\c{s}il},
+title = {Control-Flow Deobfuscation Using Trace-Informed Compositional Program Synthesis},
+year = {2024},
+issue_date = {October 2024},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {8},
+number = {OOPSLA2},
+url = {https://doi.org/10.1145/3689789},
+doi = {10.1145/3689789},
+abstract = {Code deobfuscation, which attempts to simplify code that has been intentionally obfuscated to prevent understanding, is a critical technique for downstream security analysis tasks like malware detection. While there has been significant prior work on code deobfuscation, most techniques either do not handle control flow obfuscations that modify  control flow  or they target specific classes of control flow obfuscations, making them unsuitable for handling new types of obfuscations or combinations of existing ones. In this paper, we study a new deobfuscation technique that is based on program synthesis and that can handle a broad class of control flow obfuscations. Given an obfuscated program P, our approach aims to synthesize a smallest program that is a control-flow reduction of P and that is semantically equivalent. Since our method does not assume knowledge about the types of obfuscations that have been applied to the original program,  the underlying synthesis problem ends up being very challenging. To address this challenge, we propose a novel trace-informed compositional synthesis algorithm that leverages hints present in dynamic traces of the obfuscated program to decompose the synthesis problem into a set of simpler subproblems. In particular, we show how dynamic traces can be useful for inferring a suitable control-flow skeleton of the deobfuscated program and performing independent synthesis of each basic block. We have implemented this approach in a tool called Chisel and evaluate it on 546 benchmarks that have been obfuscated using combinations of six different obfuscation techniques. Our evaluation shows that our approach is effective and that it produces code that is almost identical (modulo variable renaming) to the original (non-obfuscated) program in 86\% of cases. Our evaluation also shows that Chisel significantly outperforms existing techniques.},
+journal = {Proc. ACM Program. Lang.},
+month = {oct},
+articleno = {349},
+numpages = {27},
+keywords = {Program Synthesis, Deobfuscation, Obfuscation},
+bibtex_show={true},
+pdf={chisel.pdf},
+pdfpath = {../assets/pdf/chisel.pdf},
+abbr={OOPSLA'24},
+selected={true}
+}
+
 @article{mariano2022transpilation,
 author = {Mariano, Benjamin and Chen, Yanju and Feng, Yu and Durrett, Greg and Dillig, I\c{s}il},
 title = {Automated Transpilation of Imperative to Functional Code Using Neural-Guided Program Synthesis},
